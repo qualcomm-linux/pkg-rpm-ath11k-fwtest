@@ -4,7 +4,7 @@ SPDX-License-Identifier: BSD-3-Clause
 -->
 # ath11k-fwtest RPM - CentOS Stream 10
 
-This branch contains the CentOS Stream 10 RPM packaging for ath11k-fwtest from a prebuilt payload tarball.
+This branch contains the CentOS Stream 10 RPM packaging for ath11k-fwtest from a Qualcomm Linux release tarball.
 
 ## Package
 
@@ -12,13 +12,12 @@ This branch contains the CentOS Stream 10 RPM packaging for ath11k-fwtest from a
 |---|---|
 | Package | ath11k-fwtest |
 | Version | 1.0.0 |
-| Source | ath11k-fwtest-prebuilt-1.0.0.tar.gz |
+| Source | ath11k-fwtest_1.0.0_arm64.tar.gz |
 | Source checksum | See sources |
 
 The prebuilt payload installs:
 
 - /usr/sbin/ath11k-fwtest
-- /usr/share/doc/ath11k-fwtest/CHANGES
 
 ## Files
 
@@ -27,14 +26,14 @@ The prebuilt payload installs:
 - .github/workflows/build-on-pr.yml
 - .github/workflows/pkg-release.yml
 
-Do not commit source tarballs or built RPMs. This package uses a prebuilt payload tarball, so the tarball must be available in the lookaside cache before CI can build it.
+Do not commit source tarballs or built RPMs. The source tarball is resolved from the dist-git `sources` file and the spec `Source0` URL.
 
 ## Build
 
 Local validation can be run with qcom-rpm-utils:
 
     /path/to/qcom-rpm-utils/scripts/build-rpm.sh \
-      --tarball /path/to/ath11k-fwtest-prebuilt-1.0.0.tar.gz \
+      --tarball /path/to/ath11k-fwtest_1.0.0_arm64.tar.gz \
       --spec ath11k-fwtest.spec \
       --output /path/to/output
 
