@@ -24,8 +24,6 @@ to support firmware testing and debugging.
 %install
 mkdir -p %{buildroot}
 cp -a data/%{name}/arm64/. %{buildroot}/
-# Install license documents separately with %license.
-rm -f %{buildroot}%{_docdir}/%{name}/copyright
 find %{buildroot} \( -type f -o -type l \) -printf '/%%P\n' | sort > %{name}.files
 
 %files -f %{name}.files
