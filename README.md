@@ -4,6 +4,10 @@ SPDX-License-Identifier: BSD-3-Clause
 -->
 # ath11k-fwtest RPM - CentOS Stream 10
 
+ath11k-fwtest is a command-line utility for testing Qualcomm WLAN
+firmware. It sends firmware test commands through the wireless driver
+to support firmware testing and debugging.
+
 This branch contains the CentOS Stream 10 RPM packaging for ath11k-fwtest from a Qualcomm Linux release tarball.
 
 ## Package
@@ -11,6 +15,7 @@ This branch contains the CentOS Stream 10 RPM packaging for ath11k-fwtest from a
 | Field | Value |
 |---|---|
 | Package | ath11k-fwtest |
+| Summary | Firmware test utility for Qualcomm WLAN devices |
 | Version | 1.0.0 |
 | Source | ath11k-fwtest_1.0.0_arm64.tar.gz |
 | Source checksum | See sources |

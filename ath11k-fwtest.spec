@@ -3,7 +3,7 @@
 Name:           ath11k-fwtest
 Version:        1.0.0
 Release:        1%{?dist}
-Summary:        Qualcomm ath11k firmware test utility
+Summary:        Firmware test utility for Qualcomm WLAN devices
 
 License:        Qualcomm.nologin.binaries.license
 Source0:        https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software/chip/component/wlan-service.qclinux.0.0/260630.1/prebuilt_resolute/%{name}_%{version}_arm64.tar.gz
@@ -11,7 +11,9 @@ Source0:        https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/
 ExclusiveArch:  aarch64
 
 %description
-ath11k-fwtest is packaged from a Qualcomm Linux release tarball.
+ath11k-fwtest is a command-line utility for testing Qualcomm WLAN
+firmware. It sends firmware test commands through the wireless driver
+to support firmware testing and debugging.
 
 %prep
 %autosetup -c -n %{name}-%{version}
