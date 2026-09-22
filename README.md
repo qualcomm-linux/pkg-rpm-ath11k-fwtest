@@ -24,6 +24,11 @@ The prebuilt payload installs:
 
 - /usr/sbin/ath11k-fwtest
 
+License documents are installed under `/usr/share/licenses/ath11k-fwtest/`
+and marked as license files in the RPM:
+
+- `copyright`
+
 ## Files
 
 - ath11k-fwtest.spec
