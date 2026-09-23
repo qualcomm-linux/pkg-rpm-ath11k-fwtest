@@ -8,7 +8,7 @@ ath11k-fwtest is a command-line utility for testing Qualcomm WLAN
 firmware. It sends firmware test commands through the wireless driver
 to support firmware testing and debugging.
 
-This branch contains the CentOS Stream 10 RPM packaging for ath11k-fwtest from a Qualcomm Linux release tarball.
+This branch contains the CentOS Stream 10 RPM packaging for ath11k-fwtest from the Qualcomm Linux `260825/prebuilt_yocto` release tarball.
 
 ## Package
 
@@ -17,8 +17,10 @@ This branch contains the CentOS Stream 10 RPM packaging for ath11k-fwtest from a
 | Package | ath11k-fwtest |
 | Summary | Firmware test utility for Qualcomm WLAN devices |
 | Version | 1.0.0 |
-| Source | ath11k-fwtest_1.0.0_arm64.tar.gz |
+| Source | qcom-ath11k-fwtest_1.0_armv8-2a.tar.gz |
 | Source checksum | See sources |
+
+The Yocto source archive version (`1.0`) is tracked separately from the RPM version.
 
 The prebuilt payload installs:
 
@@ -27,7 +29,10 @@ The prebuilt payload installs:
 License documents are installed under `/usr/share/licenses/ath11k-fwtest/`
 and marked as license files in the RPM:
 
-- `copyright`
+- `NO.LOGIN.BINARY.LICENSE.QTI`
+- `LICENSE`
+
+The original copies are retained under `/usr/share/doc/qcom-ath11k-fwtest/`.
 
 ## Files
 
@@ -43,7 +48,7 @@ Do not commit source tarballs or built RPMs. The source tarball is resolved from
 Local validation can be run with qcom-rpm-utils:
 
     /path/to/qcom-rpm-utils/scripts/build-rpm.sh \
-      --tarball /path/to/ath11k-fwtest_1.0.0_arm64.tar.gz \
+      --tarball /path/to/qcom-ath11k-fwtest_1.0_armv8-2a.tar.gz \
       --spec ath11k-fwtest.spec \
       --output /path/to/output
 
